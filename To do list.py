@@ -26,7 +26,7 @@ while True:
             else:
               for i, task in enumerate(tasks):
                    print(f"{i + 1}. {task}")
-                   done_index = input(int("Enter task number to mark as done: ")) - 1
+                   done_index = int(input("Enter task number to mark as done: ")) - 1
                    if 0 <= done_index < len(tasks):
                         completed_task = tasks.pop(done_index)
                         completed_tasks.append(completed_task)

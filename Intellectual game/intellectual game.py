@@ -153,7 +153,60 @@ else:
     print("\nTry again")
     wrong_sound.play()
     pygame.time.delay(9000)
-
+## Puzzle 8 
+Weapons = pygame.mixer.Sound("cs 1.6 aug weapon animations ｜ T weapon.wav")
+Desperate = pygame.mixer.Sound("Dying Light Soundtrack - Harran.wav")
+Hunter = pygame.mixer.Sound("The Walking Dead OST   Daryl's Theme extended.wav")
+Death = pygame.mixer.Sound("Leon Kennedy Death Sound - Resident Evil 4 remake (2023).wav")
+print("\nPuzzle 8: The world has ended! \nzombies have taken over the world!")
+print("\nChoose your loadout")
+puzzle8 = input("\n")
+Tools = ["Ak47, Knife, Shotgun, Sniper rifle, Truck with food supplies", 
+         "Pistol, Shotgun, Car", 
+         "Crossbow, Baseball bat, Knife, Flashlight, Binoculars, Backpack for food"]
+random.shuffle(Tools)
+for Tool in Tools:
+    print(f"-{Tool}")
+if puzzle8 == "Ak47, Knife, Shotgun, Sniper rifle, Truck with food supplies":
+    print("\nYou are well prepared for anything, you are the John Wick and James Bond of zombie apocalypse!")
+    Weapons.play()
+    pygame.time.delay(3000)
+elif puzzle8 == "Pistol, Shotgun, Car":
+    print("\nQuick and efficient, but you won't survive for long!")
+    Desperate.play()
+    pygame.time.delay(9000)
+elif puzzle8 == "Crossbow, Baseball bat, Knife, Flashlight, Binoculars, Backpack for food":
+    print("\nYou are a natural born hunter like Daryl Dixon from walking dead.")
+    Hunter.play()
+    pygame.time.delay(9000)
+else:
+    print("\nRest in peace")
+    Death.play()
+    pygame.time.delay(3000)
+## Puzzle 9
+print("\nPuzzle 9: You are trying to steal a car, which tactic to use?")
+Police = pygame.mixer.Sound("Police chase.wav")
+Complete = pygame.mixer.Sound("[EVANO.COM] Grand Theft Auto IV Mission Complete Theme (Long Version)-HQ_1.wav")
+Hacker = pygame.mixer.Sound("Hacking Watch dogs 2.wav")
+Tactics = ["Break the window", "Pick the car lock and hotwire it", "Hack the car's security system if its electric"]
+puzzle9 = input("\nChoose the following tactics:")
+random.shuffle(Tactics)
+for Tactic in Tactics:
+    print(f"-{Tactic}")
+if puzzle9 == "Break the window":
+    print("Congratulations, you are wanted by police!")
+    Police.play()
+    pygame.time.delay(7000)
+elif puzzle9 == "Pick the car lock and hotwire it":
+    print("Mission passed!")
+    Complete.play()
+    pygame.time.delay(9000)
+elif puzzle9 == "Hack the car's security system if its electric":
+    print("You are a ghost, you can hack through any system!")
+    Hacker.play()
+    pygame.time.delay(9000)
+    
+    
 
 
     

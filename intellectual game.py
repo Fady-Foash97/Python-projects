@@ -5,8 +5,8 @@ import pygame
 ## Initialize background music
 pygame.init()
 pygame.mixer.init()
-pygame.mixer.music.load("792340__zhr__chill-background-music-3.wav")
-pygame.mixer.music.play(-1)
+##pygame.mixer.music.load("792340__zhr__chill-background-music-3.wav")
+##pygame.mixer.music.play(-1)
 correct_sound = pygame.mixer.Sound("609336__kenneth_cooney__completed.wav")
 wrong_sound = pygame.mixer.Sound("Windows XP Shutdown.wav")
 ## Introduction
@@ -116,23 +116,45 @@ for weapon in weapons:
     print(f"-{weapon}")
 puzzle6 = input("\nWhat weapon will you use?")
 if puzzle6 == "Mosin nagant":
-    print("\nIt works well on the frontlines")
+    print("\nIt works well on the frontlines\n")
     correct_sound.play()
-    pygame.time.delay(2000)
 elif puzzle6 == "Mosin nagant with scope":
     print("\nYou have the ultimate weapon, this weapon was the reason the Russians won many battles against the Germans")
     victory.play()
-    pygame.time.delay(9000)
 elif puzzle6 == "PPSH machine gun":
     print("\nThis gun works well on close range, but the magazine is emptied fast")
     correct_sound.play()
-    pygame.time.delay(2000)
 else:
     print("\nRest in peace")
     lost.play()
-    pygame.time.delay(7000)
 ## Puzzle 7
-##print("\nPuzzle 7: You wake up one day and discovered you have a superpower to read people's minds")
+Evil = pygame.mixer.Sound("Low of Solipsism - Death Note [Extended]_1.wav")
+Hero = pygame.mixer.Sound("Hans Zimmer - A Watchful Guardian The Dark Knight_1.wav")
+Wise = pygame.mixer.Sound("Interstellar Main Theme - Extra Extended - Soundtrack by  Hans Zimmer_1.wav")
+print("\nPuzzle 7: You wake up one day and discovered you have a superpower to read people's minds")
+Choices = ["Manipulate people", "Empathize with people", "Protect the innocent"]
+random.shuffle(Choices)
+for choice in Choices:
+    print(f"- {choice}")
+puzzle7 = input("\nHow would you use your superpower? ")
+if puzzle7 == "Manipulate people":
+    print("\nYou choose power over morality, that path leads to corruption")
+    Evil.play()
+    pygame.time.delay(9000)
+elif puzzle7 == "Empathize with people":
+    print("\nYou are wise, understanding others is a noble way")
+    Wise.play()
+    pygame.time.delay(9000)
+elif puzzle7 == "Protect the innocent":
+    print("\nYou are a true hero, but remeber, \nbe humble, \nyou either die a hero or live long enough to see yourself become the villain")
+    Hero.play()
+    pygame.time.delay(16000)
+else:
+    print("\nTry again")
+    wrong_sound.play()
+    pygame.time.delay(9000)
+
+
 
     
     

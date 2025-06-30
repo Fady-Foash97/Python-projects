@@ -14,6 +14,7 @@ print("Let's play a game to test your brains")
 ## Puzzle 1
 print("\nPuzzle 1: Your computer is running slow")
 puzzle1 = input("\n")
+puzzle1 = puzzle1.strip()
 ## Physical problem
 if puzzle1 == "Cleaning the dust out of my computer":
     print("\nClever")
@@ -24,7 +25,7 @@ if puzzle1 == "Cleaning the dust out of my computer":
         print(f"{tool}")
     print("\nYou are well prepared but you need a mask and sunglasses to cover your face from dust")
 ## Performance problem
-elif puzzle1 == "If the problem is internal, I would use antivirus and antispyware programs":
+elif puzzle1 == "If the problem is internal, I would use antivirus":
     print("\nYou are well prepared for any cyber security problem")
     correct_sound.play()
 else:
@@ -33,6 +34,7 @@ else:
 ## Puzzle 2
 print("\nPuzzle 2: Your warehouse is full of random supplies")
 puzzle2 = input("\n")
+puzzle2 = puzzle2.strip()
 if puzzle2 == "Arrange supplies based on category":
     print("\nExcellent, you are a smart manager")
     correct_sound.play()
@@ -45,6 +47,7 @@ else:
 ## Puzzle 3
 print("\nPuzzle 3: You are in a desert, you feel hungry, \nSuddenly! you saw an animal")
 puzzle3 = input("\n")
+puzzle3 = puzzle3.strip()
 if puzzle3 == "I would hunt it with whatever weapon I have":
     weapons = ["Hunting rifle", "Knife", "A bow and arrow"]
     for weapon in weapons:
@@ -62,6 +65,7 @@ random.shuffle(Decisions)
 for Decision in Decisions:
     print(f"-{Decision}")
 puzzle4 = input("\n")
+puzzle4 = puzzle4.strip()
 if puzzle4 == "Make a funny face":
     print("\nYou made the baby laugh!")
     baby.play()
@@ -88,6 +92,7 @@ options = ["Pick lock", "Kick the door"]
 for option in options:
     print(f"-{option}")
 puzzle5 = input("\n")
+puzzle5 = puzzle5.strip()
 if puzzle5 == "Pick lock":
     print("\nSmart way, no one will know you were really here")
     mission_complete.play()
@@ -114,7 +119,8 @@ weapons = ["Mosin nagant", "Mosin nagant with scope", "PPSH machine gun"]
 random.shuffle(weapons)
 for weapon in weapons:
     print(f"-{weapon}")
-puzzle6 = input("\nWhat weapon will you use?")
+puzzle6 = input("\n")
+puzzle6 = puzzle6.strip()
 if puzzle6 == "Mosin nagant":
     print("\nIt works well on the frontlines\n")
     correct_sound.play()
@@ -137,6 +143,7 @@ random.shuffle(Choices)
 for choice in Choices:
     print(f"- {choice}")
 puzzle7 = input("\nHow would you use your superpower? ")
+puzzle7 = puzzle7.strip()
 if puzzle7 == "Manipulate people":
     print("\nYou choose power over morality, that path leads to corruption")
     Evil.play()
@@ -159,14 +166,15 @@ Desperate = pygame.mixer.Sound("Dying Light Soundtrack - Harran.wav")
 Hunter = pygame.mixer.Sound("The Walking Dead OST   Daryl's Theme extended.wav")
 Death = pygame.mixer.Sound("Leon Kennedy Death Sound - Resident Evil 4 remake (2023).wav")
 print("\nPuzzle 8: The world has ended! \nzombies have taken over the world!")
-print("\nChoose your loadout")
-puzzle8 = input("\n")
+print("\nChoose your loadout:")
 Tools = ["Ak47, Knife, Shotgun, Sniper rifle, Truck with food supplies", 
          "Pistol, Shotgun, Car", 
          "Crossbow, Baseball bat, Knife, Flashlight, Binoculars, Backpack for food"]
 random.shuffle(Tools)
 for Tool in Tools:
     print(f"-{Tool}")
+puzzle8 = input("\n")
+puzzle8 = puzzle8.strip()
 if puzzle8 == "Ak47, Knife, Shotgun, Sniper rifle, Truck with food supplies":
     print("\nYou are well prepared for anything, you are the John Wick and James Bond of zombie apocalypse!")
     Weapons.play()
@@ -189,10 +197,12 @@ Police = pygame.mixer.Sound("Police chase.wav")
 Complete = pygame.mixer.Sound("[EVANO.COM] Grand Theft Auto IV Mission Complete Theme (Long Version)-HQ_1.wav")
 Hacker = pygame.mixer.Sound("Hacking Watch dogs 2.wav")
 Tactics = ["Break the window", "Pick the car lock and hotwire it", "Hack the car's security system if its electric"]
-puzzle9 = input("\nChoose the following tactics:")
+print("\nChoose the following tactics:")
 random.shuffle(Tactics)
 for Tactic in Tactics:
     print(f"-{Tactic}")
+puzzle9 = input("\n")
+puzzle9 = puzzle9.strip()
 if puzzle9 == "Break the window":
     print("Congratulations, you are wanted by police!")
     Police.play()

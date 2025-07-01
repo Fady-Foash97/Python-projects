@@ -2,6 +2,8 @@
 ## Attachments
 import random
 import pygame
+import time
+import threading
 ## Initialize background music
 pygame.init()
 pygame.mixer.init()
@@ -16,17 +18,17 @@ print("\nPuzzle 1: Your computer is running slow")
 puzzle1 = input("\n")
 puzzle1 = puzzle1.strip()
 ## Physical problem
-if puzzle1 == "Cleaning the dust out of my computer":
+if puzzle1 == "Clean the dust out of my computer":
     print("\nClever")
     correct_sound.play()
     tools = ["Screwdriver", "Cleaning cloth", "Spray", "Hair dryer"]
     print("\nTools to use:")
     for tool in tools:
         print(f"{tool}")
-    print("\nYou are well prepared but you need a mask and sunglasses to cover your face from dust")
+    print("You are well prepared but you need a mask and sunglasses to cover your face from dust")
 ## Performance problem
 elif puzzle1 == "If the problem is internal, I would use antivirus":
-    print("\nYou are well prepared for any cyber security problem")
+    print("You are well prepared for any cyber security problem")
     correct_sound.play()
 else:
     print("\nTry again")
@@ -69,14 +71,17 @@ puzzle4 = puzzle4.strip()
 if puzzle4 == "Make a funny face":
     print("\nYou made the baby laugh!")
     baby.play()
+    pygame.time.delay(4000)
     print("\nYou are a great parent")
 elif puzzle4 == "Give him milk to drink":
     print("\nThat's what the baby needed")
     happy.play()
+    pygame.time.delay(4000)
     print("\nYou are a great parent")
 elif puzzle4 == "Give him his favourite toy":
     print("\nHe stopped crying and started playing")
     happy.play()
+    pygame.time.delay(4000)
     print("\nYou are a great parent")
 else:
     print("\nTry again")
@@ -96,14 +101,17 @@ puzzle5 = puzzle5.strip()
 if puzzle5 == "Pick lock":
     print("\nSmart way, no one will know you were really here")
     mission_complete.play()
+    pygame.time.delay(4000)
 elif puzzle5 == "Kick the door":
     print("\nCongratulations, your cover is blown!")
     alarm.play()
+    pygame.time.delay(4000)
     print("\nGet your gun ready!")
     guard = input("two guards, one hiding behind a crate, the other behind a wall, \nwho will you shoot first? ")
     if guard == "The guard behind the wall then the other one":
         print("\nExcellent shot mister Wick!")
         gun.play()
+        pygame.time.delay(3000)
     else:
         print("\nMission failed!")
         mission_failed.play()
@@ -127,12 +135,15 @@ if puzzle6 == "Mosin nagant":
 elif puzzle6 == "Mosin nagant with scope":
     print("\nYou have the ultimate weapon, this weapon was the reason the Russians won many battles against the Germans")
     victory.play()
+    pygame.time.delay(8000)
 elif puzzle6 == "PPSH machine gun":
     print("\nThis gun works well on close range, but the magazine is emptied fast")
     correct_sound.play()
 else:
     print("\nRest in peace")
     lost.play()
+    pygame.time.delay(7000)
+    lost.stop()
 ## Puzzle 7
 Evil = pygame.mixer.Sound("Low of Solipsism - Death Note [Extended]_1.wav")
 Hero = pygame.mixer.Sound("Hans Zimmer - A Watchful Guardian The Dark Knight_1.wav")
@@ -147,19 +158,18 @@ puzzle7 = puzzle7.strip()
 if puzzle7 == "Manipulate people":
     print("\nYou choose power over morality, that path leads to corruption")
     Evil.play()
-    pygame.time.delay(9000)
+    pygame.time.delay(8000)
 elif puzzle7 == "Empathize with people":
     print("\nYou are wise, understanding others is a noble way")
     Wise.play()
-    pygame.time.delay(9000)
+    pygame.time.delay(8000)
 elif puzzle7 == "Protect the innocent":
     print("\nYou are a true hero, but remeber, \nbe humble, \nyou either die a hero or live long enough to see yourself become the villain")
     Hero.play()
-    pygame.time.delay(16000)
+    pygame.time.delay(14000)
 else:
     print("\nTry again")
     wrong_sound.play()
-    pygame.time.delay(9000)
 ## Puzzle 8 
 Weapons = pygame.mixer.Sound("cs 1.6 aug weapon animations ｜ T weapon.wav")
 Desperate = pygame.mixer.Sound("Dying Light Soundtrack - Harran.wav")
@@ -210,13 +220,49 @@ if puzzle9 == "Break the window":
 elif puzzle9 == "Pick the car lock and hotwire it":
     print("Mission passed!")
     Complete.play()
-    pygame.time.delay(9000)
+    pygame.time.delay(8000)
 elif puzzle9 == "Hack the car's security system if its electric":
     print("You are a ghost, you can hack through any system!")
     Hacker.play()
-    pygame.time.delay(9000)
-    
-    
+    pygame.time.delay(8000)
+## Puzzle 10
+timer = pygame.mixer.Sound("[EVANO.COM] 20 Second Timer Bomb with High Energy Music _ Countdown Timer _ 20 Second Bomb Timer-HQ (1).wav")
+defused = pygame.mixer.Sound("[EVANO.COM] Bomb has been defused counter terrorists win   CS GO Sound Effect-HQ.wav")
+explosion = pygame.mixer.Sound("Explosion.wav")
+print("\nPuzzle 10: You are trapped in a room, there's a bomb in front of you!")
+print("You have 3 wires and a note that says:")
+print("The wrong wire ends it all, the right wire saves them all.")
+print("The 3 wires are: ")
+wires = ["Red", "Blue", "Green"]
+random.shuffle(wires)
+for wire in wires:
+    print(f"-{wire}")
+print("Clue: The red lies, The blue obeys, The truth lies with the calm")
+
+# Start ticking
+timer.play(-1)
+
+
+# Get answer from user
+Puzzle10 = input("\nWhich wire is the right one to cut? ").strip().lower()
+
+# Stop the countdown and sound once input is entered
+timer.stop()
+
+if Puzzle10 == "green":
+    print("\nYou did it! The bomb is disarmed.")
+    defused.play()
+    pygame.time.delay(4000)
+elif Puzzle10 in ["red", "blue"]:
+    print("\nBOOM! You chose the wrong wire.")
+    explosion.play()
+    pygame.time.delay(4000)
+else:
+    print("\nBomb detonated!")
+    explosion.play()
+    pygame.time.delay(4000)
+
+
 
 
     

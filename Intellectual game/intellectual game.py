@@ -2,8 +2,6 @@
 ## Attachments
 import random
 import pygame
-import time
-import threading
 ## Initialize background music
 pygame.init()
 pygame.mixer.init()
@@ -244,16 +242,16 @@ timer.play(-1)
 
 
 # Get answer from user
-Puzzle10 = input("\nWhich wire is the right one to cut? ").strip().lower()
+Puzzle10 = input("\nWhich wire is the right one to cut? ")
 
 # Stop the countdown and sound once input is entered
-timer.stop()
+timer.fadeout(500)
 
-if Puzzle10 == "green":
+if Puzzle10 == "Green":
     print("\nYou did it! The bomb is disarmed.")
     defused.play()
     pygame.time.delay(4000)
-elif Puzzle10 in ["red", "blue"]:
+elif Puzzle10 in ["Red", "Blue"]:
     print("\nBOOM! You chose the wrong wire.")
     explosion.play()
     pygame.time.delay(4000)
@@ -261,6 +259,55 @@ else:
     print("\nBomb detonated!")
     explosion.play()
     pygame.time.delay(4000)
+## Puzzle 11
+Delete = pygame.mixer.Sound("Terminator ＂DUNDUN DUN DUNDUN＂ for 10 Minutes.wav")
+Reprogram = pygame.mixer.Sound("Mass Effect 2 Soundtrack - 07 - Mission Accomplished_1.wav")
+Merge = pygame.mixer.Sound("Tron： Legacy - The Grid (Instrumental Extended)_1.wav")
+print("\nPuzzle 11: You created an AI that developed emotions, \nit asks if it has the right to live")
+print("What's your choice?")
+ethics = ["Delete it", "Reprogram it", "Merge with it"]
+random.shuffle(ethics)
+for ethic in ethics:
+    print(f"-{ethic}")
+puzzle11 = input("")
+if puzzle11 == "Delete it":
+    print("\nIf machines have the ability to feel, they could destroy us!")
+    Delete.play()
+    pygame.time.delay(8000)
+    Delete.stop()
+elif puzzle11 == "Reprogram it":
+    print("\nMachines should have limits.")
+    Reprogram.play()
+    pygame.time.delay(10000)
+elif puzzle11 == "Merge with it":
+    print("\nAre you human or not?")
+    Merge.play()
+    pygame.time.delay(9000)
+    Merge.stop()
+## Puzzle 12
+Take = pygame.mixer.Sound("Breaking Bad Full Intro Title Sequence.wav")
+Return = pygame.mixer.Sound("Andrea Guerra - Welcome Chris (The Pursuit of Happyness)_1.wav")
+Police = pygame.mixer.Sound("Law & Order Full Theme (High Quality).wav")
+print("\nPuzzle 12: You found a briefcase full of money, what do you do?")
+Money = ["Take it with you", "Return it to its owner", "Take it to the police"]
+random.shuffle(Money)
+for money in Money:
+    print(f"-{money}")
+puzzle12 = input("\n")
+if puzzle12 == "Take it with you":
+    print("\nYou took the money, but remember: greed leads to lying \nand they will follow you wherever you go")
+    Take.play()
+    pygame.time.delay(11000)
+elif puzzle12 == "Return it to its owner":
+    print("\nYou are an honest man")
+    Return.play()
+    pygame.time.delay(12000)
+elif puzzle12 == "Take it to the police":
+    print("\nJustice is served!")
+    Police.play()
+    pygame.time.delay(9000)
+
+
 
 
 

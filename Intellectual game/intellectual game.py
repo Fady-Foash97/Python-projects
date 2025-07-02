@@ -204,6 +204,7 @@ print("\nPuzzle 9: You are trying to steal a car, which tactic to use?")
 Police = pygame.mixer.Sound("Police chase.wav")
 Complete = pygame.mixer.Sound("[EVANO.COM] Grand Theft Auto IV Mission Complete Theme (Long Version)-HQ_1.wav")
 Hacker = pygame.mixer.Sound("Hacking Watch dogs 2.wav")
+Arrested = pygame.mixer.Sound("GTA V： Wasted New ＂NEW＂ Sound.wav")
 Tactics = ["Break the window", "Pick the car lock and hotwire it", "Hack the car's security system if its electric"]
 print("\nChoose the following tactics:")
 random.shuffle(Tactics)
@@ -223,6 +224,10 @@ elif puzzle9 == "Hack the car's security system if its electric":
     print("You are a ghost, you can hack through any system!")
     Hacker.play()
     pygame.time.delay(8000)
+else:
+    print("Busted")
+    Arrested.play()
+    pygame.time.delay(7000)
 ## Puzzle 10
 timer = pygame.mixer.Sound("[EVANO.COM] 20 Second Timer Bomb with High Energy Music _ Countdown Timer _ 20 Second Bomb Timer-HQ (1).wav")
 defused = pygame.mixer.Sound("[EVANO.COM] Bomb has been defused counter terrorists win   CS GO Sound Effect-HQ.wav")
@@ -260,9 +265,10 @@ else:
     explosion.play()
     pygame.time.delay(4000)
 ## Puzzle 11
-Delete = pygame.mixer.Sound("Terminator ＂DUNDUN DUN DUNDUN＂ for 10 Minutes.wav")
+Delete = pygame.mixer.Sound("Terminator ＂DUNDUN DUN DUNDUN＂ for 10 Minutes_1.wav")
 Reprogram = pygame.mixer.Sound("Mass Effect 2 Soundtrack - 07 - Mission Accomplished_1.wav")
-Merge = pygame.mixer.Sound("Tron： Legacy - The Grid (Instrumental Extended)_1.wav")
+Merge = pygame.mixer.Sound("Tron： Legacy - The Grid (Instrumental Extended)_1_1.wav")
+Suspense = pygame.mixer.Sound("Half-Life - Valve Theme (Long Version).wav")
 print("\nPuzzle 11: You created an AI that developed emotions, \nit asks if it has the right to live")
 print("What's your choice?")
 ethics = ["Delete it", "Reprogram it", "Merge with it"]
@@ -284,10 +290,16 @@ elif puzzle11 == "Merge with it":
     Merge.play()
     pygame.time.delay(9000)
     Merge.stop()
+else:
+    print("\nInvalid choice. The AI stares at you... waiting.")
+    Suspense.play()
+    pygame.time.delay(8000)
+    Suspense.stop()
 ## Puzzle 12
 Take = pygame.mixer.Sound("Breaking Bad Full Intro Title Sequence.wav")
-Return = pygame.mixer.Sound("Andrea Guerra - Welcome Chris (The Pursuit of Happyness)_1.wav")
-Police = pygame.mixer.Sound("Law & Order Full Theme (High Quality).wav")
+Return = pygame.mixer.Sound("Andrea Guerra - Welcome Chris (The Pursuit of Happyness)_2.wav")
+Police = pygame.mixer.Sound("Law and order.wav")
+Cool = pygame.mixer.Sound("GTA San Andreas - Mission passed sound.wav")
 print("\nPuzzle 12: You found a briefcase full of money, what do you do?")
 Money = ["Take it with you", "Return it to its owner", "Take it to the police"]
 random.shuffle(Money)
@@ -306,7 +318,37 @@ elif puzzle12 == "Take it to the police":
     print("\nJustice is served!")
     Police.play()
     pygame.time.delay(9000)
-
+else:
+    print("\nYou leave it as it is")
+    Cool.play()
+    pygame.time.delay(9000)
+## Puzzle 13
+Rest = pygame.mixer.Sound("Hans Zimmer - Time (Official Audio).wav")
+Keep = pygame.mixer.Sound("Interstellar Official Soundtrack ｜ Cornfield Chase – Hans Zimmer ｜ WaterTower.WAV")
+Transfer = pygame.mixer.Sound("The Truman Show OST - 16. Underground - Storm.wav")
+Go = pygame.mixer.Sound("Cast Away Soundtrack - Main Theme.wav")
+print("\nPuzzle 13:You have a bad memory and you wish to remove it, \nso you implant a chip on you")
+Memory = ["Remove the memory", "Keep it", "Transfer it to someone else"]
+random.shuffle(Memory)
+for memory in Memory:
+    print(f"-{memory}")
+puzzle13 = input("\n")
+if puzzle13 == "Remove the memory":
+    print("\nYou can rest now and let it go")
+    Rest.play()
+    pygame.time.delay(9000)
+elif puzzle13 == "Keep it":
+    print("\nIt hurts but You could learn from it and grow")
+    Keep.play()
+    pygame.time.delay(9000)
+elif puzzle13 == "Transfer it to someone else":
+    print("\nYou are free, but now your memory is haunting someone else, \nYou have traded pain for peace, but at what cost?")
+    Transfer.play()
+    pygame.time.delay(9000)
+else:
+    print("\nYou have to live with it, pain could be a way of growing and learning")
+    Go.play()
+    pygame.time.delay(9000)
 
 
 

@@ -310,6 +310,7 @@ if puzzle12 == "Take it with you":
     print("\nYou took the money, but remember: greed leads to lying \nand they will follow you wherever you go")
     Take.play()
     pygame.time.delay(11000)
+    Take.stop()
 elif puzzle12 == "Return it to its owner":
     print("\nYou are an honest man")
     Return.play()

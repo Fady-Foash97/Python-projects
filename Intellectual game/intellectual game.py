@@ -315,10 +315,12 @@ elif puzzle12 == "Return it to its owner":
     print("\nYou are an honest man")
     Return.play()
     pygame.time.delay(12000)
+    Return.stop()
 elif puzzle12 == "Take it to the police":
     print("\nJustice is served!")
     Police.play()
     pygame.time.delay(9000)
+    Police.stop()
 else:
     print("\nYou leave it as it is")
     Cool.play()
@@ -338,24 +340,99 @@ if puzzle13 == "Remove the memory":
     print("\nYou can rest now and let it go")
     Rest.play()
     pygame.time.delay(9000)
+    Rest.stop()
 elif puzzle13 == "Keep it":
     print("\nIt hurts but You could learn from it and grow")
     Keep.play()
     pygame.time.delay(9000)
+    Keep.stop()
 elif puzzle13 == "Transfer it to someone else":
     print("\nYou are free, but now your memory is haunting someone else, \nYou have traded pain for peace, but at what cost?")
     Transfer.play()
     pygame.time.delay(9000)
+    Transfer.stop()
 else:
     print("\nYou have to live with it, pain could be a way of growing and learning")
     Go.play()
     pygame.time.delay(9000)
-
-
-
-
-
-    
-    
-
-
+    Go.stop()
+## Puzzle 14
+cross = pygame.mixer.Sound("Car Crash Sound Effect.wav")
+precise = pygame.mixer.Sound("Grand Theft Auto 3 - Mission Complete Music⧸Theme_1.wav")
+print("\nPuzzle 14: You are crossing the street, \nthe street is one way, \nThere are two cars: \none is low and far away, \none is fast and approaching")
+print("Do you cross the street? \nor not?")
+puzzle14 = input("\n")
+if puzzle14 == "Cross the street":
+    print("Rest in peace")
+    cross.play()
+    pygame.time.delay(10000)
+    cross.stop()
+elif puzzle14 == "Don't cross the street":
+    print("Wise decision, \nalways calculate the speed and distance of vehicles before crossing the street")
+    precise.play()
+    pygame.time.delay(10000)
+    precise.stop()
+else:
+    print("Doubt can save your life")
+    correct_sound.play()
+## Puzzle 15
+sport = pygame.mixer.Sound("nine-thou-grant-mohrman-supertars-remix.wav")
+regular = pygame.mixer.Sound("Gran Turismo 4 BGM - Arcade Mode.wav")
+truck = pygame.mixer.Sound("magic-arrow.wav")
+print("\nPuzzle 15: You are working in a shop and You want to buy a car, \nwhat car will you prefer to buy")
+Cars = ["A sports car", "A regular four door car", "A truck"]
+random.shuffle(Cars)
+for Car in Cars:
+    print(f"-{Car}")
+puzzle15 = input("\n")
+if puzzle15 == 'A sports car':
+    print("\nYou feel the need for speed!")
+    sport.play()
+    pygame.time.delay(10000)
+    sport.stop()
+elif puzzle15 == "A regular four door car":
+    print("\nThis car is balanced, \nit can help you in work and has decent performance")
+    regular.play()
+    pygame.time.delay(10000)
+    regular.stop()
+elif puzzle15 == "A truck":
+    print("\nIt's practical but its performance is slow and requires fuel on the long term and")
+    truck.play()
+    pygame.time.delay(10000)
+    truck.stop()
+else:
+    print("\nIt's okay, your choice is yours")
+    Reprogram.play()
+    pygame.time.delay(10000)
+    Reprogram.stop()
+## Puzzle 16
+curse = pygame.mixer.Sound("The Mummy 1 Soundtrack 01- Imhotep.wav")
+destroy = pygame.mixer.Sound("mount-doom-feat-renée-fleming.wav")
+ancient = pygame.mixer.Sound("Constantine - End Titles Theme (Soundtrack OST HD).wav")
+print("\nPuzzle 16: You went to your nearest library to borrow a book, \nYou borrowed one ,\nbut the librarian tells you that this book has knowledge that could doom humanity!")
+print("\nWhat do you do?")
+book = ["Buy it", "Leave it", "Destroy it"]
+random.shuffle(book)
+for Book in book:
+    print(f"-{Book}")
+puzzle16 = input("\n")
+if puzzle16 == "Buy it":
+    print("I have become Death, the destroyer of worlds.")
+    Delete.play()
+    pygame.time.delay(8000)
+    Delete.stop()
+elif puzzle16 == "Leave it":
+    print("\nWise decision, \nunfortunatly someone else will use the book.")
+    curse.play()
+    pygame.time.delay(10000)
+    curse.stop()
+elif puzzle16 == "Destroy it":
+    print("\nYou shall not exist!")
+    destroy.play()
+    pygame.time.delay(10000)
+    destroy.stop()
+else:
+    print("\nYou made your choice, \nbut tomorrow, an ancient evil will rise! \nbe prepared.")
+    ancient.play()
+    pygame.time.delay(14000)
+    ancient.stop()

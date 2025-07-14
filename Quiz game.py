@@ -18,7 +18,7 @@ def Quiz():
       else:
           print("Fly away!") 
           score -= 1
-          print(f"You lost {score} points out of 16 points")
+          print(f"You lost {score} points out of 18 points")
           
  
       ## Question 2
@@ -31,7 +31,7 @@ def Quiz():
       else:
           print("You're broke!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
   
       ## Question 3
@@ -49,7 +49,7 @@ def Quiz():
       else:
           print("Loser!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
   
       ## Question 4
@@ -66,19 +66,19 @@ def Quiz():
       elif answer4 in ["ywan", "1"]:
           print("That is China's currency ")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       elif answer4 in ["dinar", "2"]:
           print("Sho betgol?!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       elif answer4 in ["dollar", "3"]:
           print("USA! USA! USA!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       else: 
           print("You're broke!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
   
       ## Question 5
@@ -95,19 +95,19 @@ def Quiz():
       elif answer5 in ["Warsaw","2"]: 
           print("Wrong! Warsaw is the capital of Poland")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       elif answer5 in ["Bucharest", "1"]: 
           print("Wrong! Bucharest is the capital of Romania")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       elif answer5 in ["Vienna","4"]: 
           print("Wrong! Vienna is the capital of Austria")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       else:
           print("I am hungry!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
            
  
       ## Question 6
@@ -120,7 +120,7 @@ def Quiz():
       else:
           print("Wrong!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
  
       ## Question 7
@@ -133,7 +133,7 @@ def Quiz():
       else:
           print("Shipwreck!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
       ## Question 8
       print("\nHow many pieces in a dominos game?")
@@ -145,7 +145,7 @@ def Quiz():
       else:
           print("Match's over!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
       ## Question 9
       print("\nThe first streaming platform is: ")
@@ -161,7 +161,7 @@ def Quiz():
       else: 
           print("Wrong! Youtube is the first streaming platform.")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
  
       ## Question 10
@@ -174,7 +174,7 @@ def Quiz():
       else: 
          print("Don't ever climb it!")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
          
       
       ## Question 11
@@ -191,19 +191,19 @@ def Quiz():
       elif answer11 in ["Egypt", "3"]:
          print("Egypt does have a wall located in old Cairo, but it's not The great wall")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
       elif answer11 in ["Japan", "2"]:
          print("Japan is an island country, unlike China it doesn't need a great wall to protect it")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
       elif answer11 in ["Mexico", "4"]:
          print("The Aztec empire in Mexico was destroyed and now speak spanish.")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
       else:
          print("Wrong!")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
          
  
       ## Question 12
@@ -216,11 +216,11 @@ def Quiz():
       if answer12 in ["Anwar Sadat", "1"]:
          print("Anwar Sadat won the nobel peace prize")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
       elif answer12 in ["Wilhelm Rontgen", "2"]:
          print("Wilhelm Rontgen won the nobel prize in chemistry")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
       elif answer12 in ["Marie Curie", "3"]:
          print("Correct! Marie Curie won the nobel prize in two science fields: chemistry and physics")
          score += 1
@@ -228,7 +228,7 @@ def Quiz():
       elif answer12 in ["Albert Einstein", "4"]:
          print("Albert Einstein won the nobel prize in physics")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
          
  
       ## Question 13
@@ -237,7 +237,7 @@ def Quiz():
       if answer13 == "true":
          print("Russia was the first country to use a space rocket to launch a man into space,\nbut it wasn't the first rocket launch in history,\nit was Germany during world war 2.")
          score -= 1
-         print(f"You lost {score} point(s) out of 16 points")
+         print(f"You lost {score} point(s) out of 18 points")
       elif answer13 == "false":
          print("Germany was the first country to invent rockets but it was used in world war 2 in the final years of it.")
          score += 1
@@ -258,7 +258,7 @@ def Quiz():
       else:
           print("Wrong!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
           
        ## Question 15
@@ -271,11 +271,11 @@ def Quiz():
       if answer15 in ["John Kennedy", "1"]:
           print("John Kennedy was assassinated in 1963 and the act was signed later.")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       elif answer15 in ["Jimmy Carter", "2"]:
           print("Jimmy Carter ruled the USA in the 70s but the act was signed in the 60s.")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       elif answer15 in ["Lyndon B Johnson", "3"]:
           print("Correct! Lyndon B Johnson signed the civil rights act in 1964: his first year as president of the USA")
           score += 1
@@ -283,11 +283,11 @@ def Quiz():
       elif answer15 in ["Richard Nixon", "4"]:
           print("Richard Nixon was president of the USA from 1969 until his resignation in 1974 after the watergate scandal")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
       else:
           print("Wrong!")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
           
           
        ## Question 16
@@ -296,15 +296,15 @@ def Quiz():
       random.shuffle(options9)
       for option9 in options9:
           print(f"{option9}")
-      answer16 = input("Choose the correct answer: ").upper()
-      if answer16 in ["Keanu Reeves", "1"]:
+      answer18 = input("Choose the correct answer: ").upper()
+      if answer18 in ["Keanu Reeves", "1"]:
           print("that's correct, wake up from the matrix.")
           score += 1
-          print(f"Your score is {score} points")
+          print(f"Your score is {score} points out of 18 points")
       else:
           print("The matrix has you.")
           score -= 1
-          print(f"You lost {score} point(s) out of 16 points")
+          print(f"You lost {score} point(s) out of 18 points")
        ## Question 17
       print("\nWho won the most academy awards?")
       options10 = ["1-Tom Hanks", "2-Meryl Streep", "3-Walt Disney", "4-Daniel Day Lewis"]
@@ -314,8 +314,12 @@ def Quiz():
       answer17 = input("Choose the correct answer: ").upper()
       if answer17 in ["3", "Walt Disney"]:
           print("Correct! Walt Disney won the most academy awards and was nominated 59 times")
+          score += 1
+          print(f"Your score is {score} points out of 18 points")
       else:
           print("Wrong!")
+          score -= 1
+          print(f"You lost {score} point(s) out of 18 points")
        ## Question 18:
       print("\nWhich country that had the most winners in chess?")
       options11 = ["1-USA", "2-Russia", "3-Britain"]
@@ -325,17 +329,26 @@ def Quiz():
       answer18 = input("Choose the correct answer: ").upper()
       if answer18 in ["1", "USA"]:
           print("Although USA has a grandmaster like Bobbie Fischer, but that's just an exception, \nChess is not a national game in the USA")
+          score -= 1
+          print(f"You lost {score} point(s) out of 18 points")
       elif answer18 in ["2", "Russia"]:
           print("Correct! chess is a national game in Russia, it's studied in school, \nRussia has two grandmasters with the most wins:\nGarry Kasparov and Karpov")
+          score += 1
+          print(f"Your score is {score} points out of 18 points")
       elif answer18 in ["3", "Britain"]:
           print("Although chess is popular in Britain, it is not a national sport like football and boxing.")
+          score -= 1
+          print(f"You lost {score} point(s) out of 18 points")
       else:
           print("Wrong")
+          score -= 1
+          print(f"You lost {score} point(s) out of 18 points")
       ## Question 19:
       print("\n")
+      print("\n")
       print("\nGame over!")
-      print(f"you scored {score} points out of 16")
-      if score == 16:
+      print(f"you scored {score} points out of 18")
+      if score == 18:
          print("Congratulations! perfect score!")
       elif score == 7:
           print("\nGood but it could be better")
